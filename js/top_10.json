@@ -1,0 +1,96 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":400,
+    "height":300,
+    "data": {
+      "values": [
+        {"COUNTRY": "SINGAPORE", "Visitors_2023": 8308230, "color": "#FF0000"},
+        {"COUNTRY": "INDONESIA", "Visitors_2023": 3108165, "color": "#FF5722"},  
+        {"COUNTRY": "THAILAND", "Visitors_2023": 1551282, "color": "#FFD700"},  
+        {"COUNTRY": "CHINA", "Visitors_2023": 1474114, "color": "#8B0000"},     
+        {"COUNTRY": "BRUNEI", "Visitors_2023": 811833, "color": "#DAA520"},     
+        {"COUNTRY": "INDIA", "Visitors_2023": 671846, "color": "#FF9800"},       
+        {"COUNTRY": "SOUTH KOREA", "Visitors_2023": 400853, "color": "#000000"}, 
+        {"COUNTRY": "VIETNAM", "Visitors_2023": 344361, "color": "#FF1493"},    
+        {"COUNTRY": "AUSTRALIA", "Visitors_2023": 343438, "color": "#0000FF"},  
+        {"COUNTRY": "PHILIPPINES", "Visitors_2023": 339282, "color": "#000080"}   
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "datum.Visitors_2023 / 1000",  
+        "as": "Visitors_2023_k"
+      },
+      {
+        "filter": "datum.Visitors_2023_k > 0"  
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Visitors_2023_k",
+        "type": "quantitative",
+        "title": "Number of Visitors in 2023 (in thousands)",
+        "axis": {
+          "format": ".0f" 
+        }
+      },
+      "y": {
+        "field": "COUNTRY",
+        "type": "nominal",
+        "axis":{
+          "labels":false,
+          "title":null
+        },
+        "sort": {
+          "field": "Visitors_2023_k",
+          "order": "descending"
+        }
+      },
+      "color": {
+        "field": "COUNTRY",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "SINGAPORE",
+            "INDONESIA",
+            "THAILAND",
+            "CHINA",
+            "BRUNEI",
+            "INDIA",
+            "SOUTH KOREA",
+            "VIETNAM",
+            "AUSTRALIA",
+            "PHILIPPINES"
+          ],
+          "range": [
+            "#FF0000", 
+            "#FF5722", 
+            "#FFD700", 
+            "#8B0000", 
+            "#DAA520",
+            "#FF9800", 
+            "#000000", 
+            "#FF1493",
+            "#0000FF", 
+            "#000080"  
+          ]
+        },
+        "legend": {
+          "title": "Country",
+          "orient": "right",
+          "fillColor": "white"
+        }
+      },
+      "tooltip": [
+        {"field": "COUNTRY", "title": "Country"},
+        {
+          "field": "Visitors_2023_k",
+          "type": "quantitative",
+          "title": "Visitors in 2023 (in thousands)",
+          "format": ".2f" 
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "vconcat": [
+      {
+        "data": {
+          "values": [
+            {"Age_Group": "15 - 24", "Total_2022_Visitors": 31838.44},
+            {"Age_Group": "25 - 39", "Total_2022_Visitors": 54598.35},
+            {"Age_Group": "40 - 54", "Total_2022_Visitors": 34136.37},
+            {"Age_Group": "≥ 55", "Total_2022_Visitors": 22642.75}
+          ]
+        },
+        "mark": "bar",
+        "encoding": {
+          "y": {"field": "Age_Group", "type": "ordinal", "axis": {"title": "Age Group"}},
+          "x": {
+            "field": "Total_2022_Visitors",
+            "type": "quantitative",
+            "title": "2022 Visitors",
+            "axis": {"titleColor": "black"}
+          },
+          "color": {"value": "#1f77b4"},
+          "tooltip": [
+            {"field": "Age_Group", "type": "ordinal", "title": "Age Group"},
+            {"field": "Total_2022_Visitors", "type": "quantitative", "title": "2022 Visitors"}
+          ]
+        },
+        "width": 400,
+        "height": 150
+      },
+      {
+        "data": {
+          "values": [
+            {"Age_Group": "15 - 24", "Total_2023_Visitors": 39065.91},
+            {"Age_Group": "25 - 39", "Total_2023_Visitors": 69075.64},
+            {"Age_Group": "40 - 54", "Total_2023_Visitors": 42127.66},
+            {"Age_Group": "≥ 55", "Total_2023_Visitors": 27238.70}
+          ]
+        },
+        "mark": "bar",
+        "encoding": {
+          "y": {"field": "Age_Group", "type": "ordinal", "axis": {"title": "Age Group"}},
+          "x": {
+            "field": "Total_2023_Visitors",
+            "type": "quantitative",
+            "title": "2023 Visitors",
+            "axis": {"titleColor": "black"}
+          },
+          "color": {"value": "#ff7f0e"},
+          "tooltip": [
+            {"field": "Age_Group", "type": "ordinal", "title": "Age Group"},
+            {"field": "Total_2023_Visitors", "type": "quantitative", "title": "2023 Visitors"}
+          ]
+        },
+        "width": 400,
+        "height": 150
+      }
+    ]
+  }
+  

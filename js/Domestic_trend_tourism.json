@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Domestic Trend",
+  "width": 1000,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Week%2010%20Homework/Data/cleaned_domestic_visitors_2017_2023.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "state_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Labuan",
+          "Melaka",
+          "Kuala Lumpur",
+          "Selangor",
+          "Kedah",
+          "Johor",
+          "Penang",
+          "Negeri Sembilan",
+          "Perlis",
+          "Perak",
+          "Pahang",
+          "Sabah",
+          "Putrajaya",
+          "Terengganu",
+          "Kelantan",
+          "Sarawak"
+        ],
+        "labels": [
+          "All",
+          "Labuan",
+          "Melaka",
+          "Kuala Lumpur",
+          "Selangor",
+          "Kedah",
+          "Johor",
+          "Penang",
+          "Negeri Sembilan",
+          "Perlis",
+          "Perak",
+          "Pahang",
+          "Sabah",
+          "Putrajaya",
+          "Terengganu",
+          "Kelantan",
+          "Sarawak"
+        ],
+        "name": "State Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "state_selection == null || datum.State == state_selection"}
+  ],
+  "encoding": {
+    "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+    "y": {
+      "field": "Visitors",
+      "type": "quantitative",
+      "title": "Number of Visitors ('000)"
+    },
+    "color": {
+      "field": "State",
+      "type": "nominal",
+      "title": "State",
+      "scale": {
+        "domain": [
+          "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", 
+          "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", 
+          "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", 
+          "Sarawak"
+        ],
+        "range": [
+                "#FF4500",  
+                "#00FFFF",  
+                "#FFD700", 
+                "#800020",  
+                "#000000",  
+                "#FF00FF",  
+                "#8A2BE2",  
+                "#1E90FF",  
+                "#00BFFF",  
+                "#DC143C",  
+                "#808080", 
+                "#FF6347",  
+                "#FFB6C1",
+                "#FF7F50",  
+                "#000080",  
+                "#800080" 
+          ]
+
+        }
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Visitors", "type": "quantitative", "format": ".2f"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "line", "point": true, "tooltip": true}},
+    {"mark": {"type": "point", "filled": true, "size": 100}}
+  ],
+  "config": {}
+}

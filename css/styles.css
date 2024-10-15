@@ -1,0 +1,238 @@
+/* General body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0e0; /* Fallback background color */
+  background-image: url('https://imagegallery.tourism.gov.my/fotoweb/cache/v2/6/z/Kuala%20Lumpur/KL%20SKYSCAPE/Top%20view%20of%20Kuala%20Lumper%20skyline%20at%20twilight.jpeg.pye-ifroMV2TOZdjgBkA.JTZZ_7_bCx.jpg'); 
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+
+/* body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 50%; 
+  width: 1px; 
+  height: 100vh; 
+  background-color: red; 
+  z-index: 9999; 
+  transform: translateX(-50%); 
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%; 
+  left: 0;
+  width: 100vw; 
+  height: 1px; 
+  background-color: red; 
+  z-index: 9999; 
+  transform: translateY(-50%); 
+} */
+
+/* Header Styles */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Red background container for text */
+.text-container {
+  background-color: #f8d7da;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.foot_container{
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.head_text_container {
+  background-color: #f8d7da;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Malaysia map and World map */
+#malaysia_map{
+  height: 500px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  margin-left: 10rem;
+}
+
+#world_Map{
+  margin-bottom: 20rem;
+  margin-left: 100rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Row styles */
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.row-text{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.row_right {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.row_center{
+  display: flex;
+  justify-content: center; /* Maintain spacing between elements */
+  align-items: center;
+  width: 100%;
+}
+
+#point_of_entry, #Singapore_donut {
+  flex: 1;
+  height: 300px;
+  margin-right: 20px; /* Maintain gap between graphs */
+}
+
+.chart-wrapper {
+  margin-left: -3rem;
+}
+
+#top_10 {
+  flex: 1;
+  height: 200px;
+  margin-left: 200px;
+}
+
+#population_pyramid {
+  flex: 1;
+  height: 400px;
+  margin-left: 200px; 
+  padding-right: 0px;
+  margin-bottom: 0;
+}
+
+#Area_chart {
+  flex: 1;
+  height: 300px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+#Domestic_trend_tourism{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+/* Paragraph styles */
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+#Singapore_donut {
+  margin-left: 10rem;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#Vs_bar {
+  margin-left: 4rem;
+}
+
+#bump_rank {
+  margin-left: 70px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center; /* Center align for better look */
+  }
+  #point_of_entry, #Singapore_donut, #Vs_bar, #Area_chart, #population_pyramid, #top_10, #bump_rank {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Allow height to adjust */
+    margin-bottom: 20px; /* Added space between items */
+  }
+}

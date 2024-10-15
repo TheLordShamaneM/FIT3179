@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "values": [
+      {"mode": "Air", "value": 851000},
+      {"mode": "Land", "value": 7003000},
+      {"mode": "Sea", "value": 101000},
+      {"mode": "Rail", "value": 353000}
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "(datum.value / 8308230) * 100",
+      "as": "sg_percentage"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 50
+      },
+      "encoding": {
+        "theta": {
+          "field": "sg_percentage",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "color": {
+          "field": "mode",
+          "type": "nominal",
+          "legend": {"title": "Mode of Entry"},
+          "scale": {
+            "domain": ["Land", "Air", "Sea", "Rail"],
+            "range": ["green", "orange", "blue", "gray"]
+          }
+        },
+        "tooltip": [
+          {"field": "mode", "type": "nominal", "title": "Mode"},
+          {"field": "sg_percentage", "type": "quantitative", "title": "Percentage(%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2,
+        "color": "black"
+      },
+      "encoding": {
+        "x": {"value": 150},  
+        "y": {"value": 150},  
+        "x2": {"value": 320},  
+        "y2": {"value": 110}   
+      },
+      "transform": [
+        {
+          "filter": "datum.mode === 'Land'"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 14
+      },
+      "encoding": {
+        "text": {
+          "value": "Highest mode of entry by Singaporeans,\n84% Land"
+        },
+        "x": {"value": 300},  
+        "y": {"value": 100},   
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "view": {
+    "stroke": null
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

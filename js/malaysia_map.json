@@ -1,0 +1,94 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1000,
+    "height": 500,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
+      "format": {"type": "topojson", "feature": "states"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.Name",
+        "from": {
+          "data": {
+            "values": [
+              {"name": "Johor", "tourists": 8922.996},
+              {"name": "Kedah", "tourists": 6452.428},
+              {"name": "Kelantan", "tourists": 4085.791},
+              {"name": "Melaka", "tourists": 4991.130},
+              {"name": "Negeri Sembilan", "tourists": 4255.452},
+              {"name": "Pahang", "tourists": 8537.106},
+              {"name": "Penang", "tourists": 4069.699},
+              {"name": "Perak", "tourists": 7503.392},
+              {"name": "Perlis", "tourists": 735.990},
+              {"name": "Sabah", "tourists": 5775.138},
+              {"name": "Sarawak", "tourists": 5324.627},
+              {"name": "Selangor", "tourists": 8455.683},
+              {"name": "Terengganu", "tourists": 4060.009},
+              {"name": "Kuala Lumpur", "tourists": 5724.790},
+              {"name": "Labuan", "tourists": 164.106},
+              {"name": "Putrajaya", "tourists": 501.087}
+            ]
+          },
+          "key": "name",
+          "fields": ["tourists"]
+        }
+      },
+      {
+        "joinaggregate": [
+          {"op": "sum", "field": "tourists", "as": "total_tourists"}
+        ]
+      },
+      {
+        "calculate": "datum.tourists / datum.total_tourists * 100",
+        "as": "tourists_percentage"
+      }
+    ],
+    "projection": {
+      "type": "mercator",
+      "scale": 2250,
+      "center": [107.9758, 4.2105]
+    },
+    "layer": [
+      {
+        "mark": "geoshape",
+        "data": {"sphere": true},
+        "encoding": {
+          "color": {"value": "#7BB5FF"}
+        }
+      },
+      {
+        "mark": {
+          "type": "geoshape",
+          "stroke": "black",
+          "strokeWidth": 0.5
+        },
+        "encoding": {
+          "color": {
+            "field": "tourists_percentage",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [3, 5, 7, 9, 11],
+              "range": ["#FFCCCC","#FF9999", "#FF6666", "#FF3333","#CC0000","#990000"]
+            },
+            "legend": {"title": "Tourists (%)"}
+          },
+          "tooltip": [
+            {"field": "properties.Name", "type": "nominal", "title": "State"},
+            {"field": "tourists_percentage", "type": "quantitative", "title": "Tourists (%)", "format": ".2f"}
+          ]
+        }
+      },
+      {
+        "mark": "geoshape",
+        "data": {"graticule": {"step": [5, 5]}},
+        "encoding": {
+          "stroke": {"value": "gray"},
+          "strokeWidth": {"value": 0.2}
+        }
+      }
+    ],
+    "config": {}
+  }
+  

@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie chart showing tourist arrivals by mode of entry in 2023 as percentages",
+    "height":400,
+    "width":400,
+    "data": {
+      "values": [
+        {"mode": "Air", "tourists": 7394824},
+        {"mode": "Land", "tourists": 11233697},
+        {"mode": "Sea", "tourists": 1124544},
+        {"mode": "Rail", "tourists": 388781}
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "(datum.tourists / 20141846) * 100",
+        "as": "percentage"
+      }
+    ],
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "percentage", "type": "quantitative"},
+      "color": {"field": "mode", 
+      "type": "nominal",
+      "scale": {
+        "domain": ["Land", "Air", "Sea", "Rail"],
+        "range": ["darkred", "orange", "blue", "gray"]
+      }
+    },
+      "tooltip": [
+        {"field": "mode", "type": "nominal", "title": "Mode"},
+        {"field": "percentage", "type": "quantitative","title": "Percentage", "format": ".2f"}
+      ]
+    },
+    "view": {"stroke": null}
+  }
+  
+  

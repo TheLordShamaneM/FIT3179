@@ -1,0 +1,212 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bump Chart of Domestic Visitors (2017-2023)",
+  "width": 400,
+  "data": {
+    "values": [
+      {"States": "Labuan", "Years": 2017, "Visitors": 381.0047677},
+      {"States": "Melaka", "Years": 2017, "Visitors": 12624.98481},
+      {"States": "Kuala Lumpur", "Years": 2017, "Visitors": 19049.44248},
+      {"States": "Selangor", "Years": 2017, "Visitors": 25491.16105},
+      {"States": "Kedah", "Years": 2017, "Visitors": 13304.53493},
+      {"States": "Johor", "Years": 2017, "Visitors": 13140.63973},
+      {"States": "Penang", "Years": 2017, "Visitors": 12642.64328},
+      {"States": "Negeri Sembilan", "Years": 2017, "Visitors": 10822.32055},
+      {"States": "Perlis", "Years": 2017, "Visitors": 1413.610533},
+      {"States": "Perak", "Years": 2017, "Visitors": 20109.71007},
+      {"States": "Pahang", "Years": 2017, "Visitors": 16491.33914},
+      {"States": "Sabah", "Years": 2017, "Visitors": 17791.71264},
+      {"States": "Putrajaya", "Years": 2017, "Visitors": 1871.857684},
+      {"States": "Terengganu", "Years": 2017, "Visitors": 12979.37637},
+      {"States": "Kelantan", "Years": 2017, "Visitors": 9623.663823},
+      {"States": "Sarawak", "Years": 2017, "Visitors": 17670.34745},
+      {"States": "Labuan", "Years": 2018, "Visitors": 544.9320221},
+      {"States": "Melaka", "Years": 2018, "Visitors": 13122.60416},
+      {"States": "Kuala Lumpur", "Years": 2018, "Visitors": 19165.49717},
+      {"States": "Selangor", "Years": 2018, "Visitors": 30179.0472},
+      {"States": "Kedah", "Years": 2018, "Visitors": 14480.0184},
+      {"States": "Johor", "Years": 2018, "Visitors": 13487.23791},
+      {"States": "Penang", "Years": 2018, "Visitors": 14450.49119},
+      {"States": "Negeri Sembilan", "Years": 2018, "Visitors": 12802.11891},
+      {"States": "Perlis", "Years": 2018, "Visitors": 2155.507903},
+      {"States": "Perak", "Years": 2018, "Visitors": 17553.16121},
+      {"States": "Pahang", "Years": 2018, "Visitors": 18111.35658},
+      {"States": "Sabah", "Years": 2018, "Visitors": 20359.88109},
+      {"States": "Putrajaya", "Years": 2018, "Visitors": 1891.906993},
+      {"States": "Terengganu", "Years": 2018, "Visitors": 13742.36636},
+      {"States": "Kelantan", "Years": 2018, "Visitors": 9846.123436},
+      {"States": "Sarawak", "Years": 2018, "Visitors": 19380.2302},
+      {"States": "Labuan", "Years": 2019, "Visitors": 523.8702531},
+      {"States": "Melaka", "Years": 2019, "Visitors": 13978.97417},
+      {"States": "Kuala Lumpur", "Years": 2019, "Visitors": 22633.3677},
+      {"States": "Selangor", "Years": 2019, "Visitors": 33588.52696},
+      {"States": "Kedah", "Years": 2019, "Visitors": 14831.15551},
+      {"States": "Johor", "Years": 2019, "Visitors": 14274.36427},
+      {"States": "Penang", "Years": 2019, "Visitors": 15410.62523},
+      {"States": "Negeri Sembilan", "Years": 2019, "Visitors": 13303.04184},
+      {"States": "Perlis", "Years": 2019, "Visitors": 2087.372446},
+      {"States": "Perak", "Years": 2019, "Visitors": 21070.72091},
+      {"States": "Pahang", "Years": 2019, "Visitors": 18497.57835},
+      {"States": "Sabah", "Years": 2019, "Visitors": 22035.06747},
+      {"States": "Putrajaya", "Years": 2019, "Visitors": 1948.889218},
+      {"States": "Terengganu", "Years": 2019, "Visitors": 14158.28363},
+      {"States": "Kelantan", "Years": 2019, "Visitors": 10985.65201},
+      {"States": "Sarawak", "Years": 2019, "Visitors": 19793.37569},
+      {"States": "Labuan", "Years": 2020, "Visitors": 107.53},
+      {"States": "Melaka", "Years": 2020, "Visitors": 7274.547},
+      {"States": "Kuala Lumpur", "Years": 2020, "Visitors": 12434.908},
+      {"States": "Selangor", "Years": 2020, "Visitors": 19714.734},
+      {"States": "Kedah", "Years": 2020, "Visitors": 10108.084},
+      {"States": "Johor", "Years": 2020, "Visitors": 7242.508},
+      {"States": "Penang", "Years": 2020, "Visitors": 8929.515},
+      {"States": "Negeri Sembilan", "Years": 2020, "Visitors": 7917.736},
+      {"States": "Perlis", "Years": 2020, "Visitors": 1193.108},
+      {"States": "Perak", "Years": 2020, "Visitors": 13173.306},
+      {"States": "Pahang", "Years": 2020, "Visitors": 9905.002},
+      {"States": "Sabah", "Years": 2020, "Visitors": 10336.897},
+      {"States": "Putrajaya", "Years": 2020, "Visitors": 451.113},
+      {"States": "Terengganu", "Years": 2020, "Visitors": 7419.729},
+      {"States": "Kelantan", "Years": 2020, "Visitors": 6058.183},
+      {"States": "Sarawak", "Years": 2020, "Visitors": 9393.255},
+      {"States": "Labuan", "Years": 2021, "Visitors": 53.899},
+      {"States": "Melaka", "Years": 2021, "Visitors": 3878.14},
+      {"States": "Kuala Lumpur", "Years": 2021, "Visitors": 9116.005},
+      {"States": "Selangor", "Years": 2021, "Visitors": 10211.58},
+      {"States": "Kedah", "Years": 2021, "Visitors": 4023.002},
+      {"States": "Johor", "Years": 2021, "Visitors": 3657.55},
+      {"States": "Penang", "Years": 2021, "Visitors": 5060.864},
+      {"States": "Negeri Sembilan", "Years": 2021, "Visitors": 5485.17},
+      {"States": "Perlis", "Years": 2021, "Visitors": 406.796},
+      {"States": "Perak", "Years": 2021, "Visitors": 4489.273},
+      {"States": "Pahang", "Years": 2021, "Visitors": 3404.772},
+      {"States": "Sabah", "Years": 2021, "Visitors": 3815.016},
+      {"States": "Putrajaya", "Years": 2021, "Visitors": 223.006},
+      {"States": "Terengganu", "Years": 2021, "Visitors": 3719.052},
+      {"States": "Kelantan", "Years": 2021, "Visitors": 1920.93},
+      {"States": "Sarawak", "Years": 2021, "Visitors": 6510.9},
+      {"States": "Labuan", "Years": 2022, "Visitors": 243.695},
+      {"States": "Melaka", "Years": 2022, "Visitors": 11757.166},
+      {"States": "Kuala Lumpur", "Years": 2022, "Visitors": 16912.534},
+      {"States": "Selangor", "Years": 2022, "Visitors": 21989.558},
+      {"States": "Kedah", "Years": 2022, "Visitors": 11186.197},
+      {"States": "Johor", "Years": 2022, "Visitors": 12376.202},
+      {"States": "Penang", "Years": 2022, "Visitors": 10002.735},
+      {"States": "Negeri Sembilan", "Years": 2022, "Visitors": 11490.144},
+      {"States": "Perlis", "Years": 2022, "Visitors": 1669.175},
+      {"States": "Perak", "Years": 2022, "Visitors": 14566.727},
+      {"States": "Pahang", "Years": 2022, "Visitors": 13188.959},
+      {"States": "Sabah", "Years": 2022, "Visitors": 12589.005},
+      {"States": "Putrajaya", "Years": 2022, "Visitors": 1305.808},
+      {"States": "Terengganu", "Years": 2022, "Visitors": 10233.282},
+      {"States": "Kelantan", "Years": 2022, "Visitors": 6627.155},
+      {"States": "Sarawak", "Years": 2022, "Visitors": 15464.621},
+      {"States": "Labuan", "Years": 2023, "Visitors": 331.36},
+      {"States": "Melaka", "Years": 2023, "Visitors": 15558.661},
+      {"States": "Kuala Lumpur", "Years": 2023, "Visitors": 22232.643},
+      {"States": "Selangor", "Years": 2023, "Visitors": 27579.478},
+      {"States": "Kedah", "Years": 2023, "Visitors": 13444.055},
+      {"States": "Johor", "Years": 2023, "Visitors": 15804.89},
+      {"States": "Penang", "Years": 2023, "Visitors": 13127.587},
+      {"States": "Negeri Sembilan", "Years": 2023, "Visitors": 14959.47},
+      {"States": "Perlis", "Years": 2023, "Visitors": 1950.771},
+      {"States": "Perak", "Years": 2023, "Visitors": 17107.518},
+      {"States": "Pahang", "Years": 2023, "Visitors": 16455.567},
+      {"States": "Sabah", "Years": 2023, "Visitors": 16080.074},
+      {"States": "Putrajaya", "Years": 2023, "Visitors": 1900.379},
+      {"States": "Terengganu", "Years": 2023, "Visitors": 11760.516},
+      {"States": "Kelantan", "Years": 2023, "Visitors": 7549.37},
+      {"States": "Sarawak", "Years": 2023, "Visitors": 17901.19}
+    ]
+  },
+  "selection": {
+    "category_select": {
+    "type": "multi",
+    "fields": ["States"],
+    "bind": "legend"
+  }
+  },
+  "transform": [
+    {
+     "filter":{"selection": "category_select"}
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "groupby": ["Years"],
+      "sort": [{"field": "Visitors", "order": "descending"}]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 100
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "Years",
+      "type": "ordinal",
+      "axis": {
+        "title": "Year",
+        "grid": true
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "ordinal",
+      "axis": {
+        "title": "Rank",
+        "grid": true
+      },
+      "scale": {
+        "reverse":false
+      }
+    },
+    "color": {
+      "field": "States",
+      "type": "nominal",
+      "legend": {
+        "title": "State",
+        "symbolType": "circle"
+      },
+      "scale": {
+      "domain": [
+        "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", 
+        "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", 
+        "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", 
+        "Sarawak"
+      ],
+      "range": [
+              "#FF4500",  
+              "#00FFFF",  
+              "#FFD700", 
+              "#800020",  
+              "#000000",  
+              "#FF00FF",  
+              "#8A2BE2",  
+              "#1E90FF",  
+              "#00BFFF",  
+              "#DC143C",  
+              "#808080", 
+              "#FF6347",  
+              "#FFB6C1",
+              "#FF7F50",  
+              "#000080",  
+              "#800080" 
+        ]
+
+      }
+    },
+    "tooltip": [
+      {"field": "States", "type": "nominal", "title": "State"},
+      {"field": "Years", "type": "ordinal", "title": "Year"},
+      {"field": "Visitors", "type": "quantitative", "title": "Visitors('000)", "format":".2f"},
+      {"field": "rank", "type": "ordinal", "title": "Rank"}
+    ]
+  }
+}

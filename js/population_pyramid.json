@@ -1,0 +1,110 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A population pyramid with male visitors on the right and female visitors on the left, split by age group in the middle.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Assignment%202/Data/gender_age_group.csv"
+    },
+    "transform": [],
+    "hconcat": [
+      {
+        "title": "Female",
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "Age Group",
+            "type": "nominal",
+            "sort": [
+              "55 and above", "40-54", "25-39", "15-24"
+            ],
+            "axis": null
+          },
+          "x": {
+            "field": "Female Visitors (Million)",
+            "type": "quantitative",
+            "title": "Visitors (Million)",
+            "axis": {
+              "format": ".0f"
+            },
+            "scale": {
+              "domain": [0, 50],
+              "reverse": true
+            }
+          },
+          "color": {
+            "value": "pink"
+          },
+          "tooltip": [
+            {"field": "Age Group", "type": "nominal"},
+            {"field": "Female Visitors (Million)", "type": "quantitative", "format": ".2f"}
+          ]
+        },
+        "width":150,
+        "height": 300
+      },
+      {
+        "title": "Age Group",
+        "mark": "text",
+        "encoding": {
+          "y": {
+            "field": "Age Group",
+            "type": "nominal",
+            "sort": [
+              "55 and above", "40-54", "25-39", "15-24"
+            ],
+            "axis": null
+          },
+          "text": {
+            "field": "Age Group",
+            "type": "nominal"
+          },
+          "color": {
+            "value": "black"
+          }
+        },
+        "width":100,
+        "height": 300
+      },
+      {
+        "title": "Male",
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "Age Group",
+            "type": "nominal",
+            "sort": [
+              "55 and above", "40-54", "25-39", "15-24"
+            ],
+            "axis": null
+          },
+          "x": {
+            "field": "Male Visitors (Million)",
+            "type": "quantitative",
+            "title": "Visitors (Million)",
+            "axis": {
+              "format": ".0f"
+            },
+            "scale": {
+              "domain": [0, 50]
+            }
+          },
+          "color": {
+            "value": "blue"
+          },
+          "tooltip": [
+            {"field": "Age Group", "type": "nominal"},
+            {"field": "Male Visitors (Million)", "type": "quantitative", "format": ".2f"}
+          ]
+        },
+        "width":150,
+        "height": 300
+      }
+    ],
+    "config": {
+      "axisY": {
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 5
+      }
+    }
+  }
+  
